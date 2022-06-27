@@ -161,6 +161,7 @@ def pytest_sessionfinish(session, exitstatus):
                 os.path.expandvars(DEFAULT_COVERAGE_PATH)))
         )
         reportdir = os.path.normpath(os.path.abspath("htmlcov"))
+        print("============================== TEST ================================")
         try_to_inline_css_into_each_html_report_file(reportdir)
         if os.path.exists(covpath):
             if mountinfo:
